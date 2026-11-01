@@ -2,7 +2,7 @@
 
 一个可被 **Sileo / Zebra / Cydia** 添加的 iOS 越狱软件源。索引由纯 Python 脚本生成，**无需在本机安装 dpkg**，Windows / macOS / Linux 通用。本教程带你从零把它部署到 GitHub 并上线。
 
-本仓库对应账号：**shu5230**，仓库名：**dream**，源地址：`https://shu5230.github.io/dream/`
+本仓库对应账号：**shu5230**，仓库名：**Dream**，源地址：`https://shu5230.github.io/Dream/`
 
 ---
 
@@ -33,7 +33,7 @@ jailbreak-repo/
     └── deploy.yml         # 可选：push 时自动重建索引并部署 Pages
 ```
 
-> 本仓库已 `git init` 并提交首个 commit，且已关联远端 `origin` 到 `https://github.com/shu5230/dream.git`。你只需做「建空仓库 + 推送 + 开 Pages」三步。
+> 本仓库已 `git init` 并提交首个 commit，且已关联远端 `origin` 到 `https://github.com/shu5230/Dream.git`。你只需做「建空仓库 + 推送 + 开 Pages」三步。
 
 ---
 
@@ -42,7 +42,7 @@ jailbreak-repo/
 ### 步骤 1：在 GitHub 网页创建空仓库
 
 1. 打开 <https://github.com/new>。
-2. **Repository name**：填 `dream`（这就是源 URL 的一部分）。
+2. **Repository name**：填 `Dream`（这就是源 URL 的一部分）。
 3. **Visibility**：选 **Public**（私有仓库的 GitHub Pages 不可被外部访问）。
 4. **不要**勾选 "Add a README file" / ".gitignore" / "Choose a license" —— 本地已有这些文件，勾了会冲突。
 5. 点 **Create repository**。创建后页面会显示一个空仓库和一堆命令，不用管它。
@@ -51,11 +51,11 @@ jailbreak-repo/
 
 本仓库已执行：
 ```bash
-git remote add origin https://github.com/shu5230/dream.git
+git remote add origin https://github.com/shu5230/Dream.git
 ```
 若需改用 SSH：
 ```bash
-git remote set-url origin git@github.com:shu5230/dream.git
+git remote set-url origin git@github.com:shu5230/Dream.git
 ```
 > 注：本机 git 全局配了 `insteadOf` 代理，`git remote -v` 可能显示为 `https://ghproxy.net/...` 前缀，这是正常的，push 会走代理加速。
 
@@ -71,7 +71,7 @@ git push -u origin main
 - **SSH**：若 `~/.ssh` 已配置且公钥加在 GitHub 上，直接成功。
 - **Personal Access Token（HTTPS 备用）**：若弹窗登录不可用，去 GitHub → Settings → Developer settings → **Fine-grained PAT**（或 Classic PAT，勾 `repo` 权限、设短期过期），生成后用 token 当密码填；或：
   ```bash
-  git remote set-url origin https://<你的TOKEN>@github.com/shu5230/dream.git
+  git remote set-url origin https://<你的TOKEN>@github.com/shu5230/Dream.git
   git push -u origin main
   ```
   > token 用完建议立刻撤销（Settings → Developer settings → 删除该 PAT）。
@@ -93,21 +93,21 @@ git push -u origin main
    git push
    ```
 2. 仓库 **Settings → Pages → Source** 选 **main** 分支、**/ (root)** 目录 → Save。
-3. 源地址：`https://shu5230.github.io/dream/`
+3. 源地址：`https://shu5230.github.io/Dream/`
 
 #### 方式 B：GitHub Actions 自动部署（推荐，零手动）
 
 1. 仓库 **Settings → Pages → Source** 选 **GitHub Actions**。
 2. 之后你只要 `git push` 任意改动（新增 `.deb`、改 `repo.json` 等），`deploy.yml` 会自动跑 `update_repo.py` 并把整个站点部署到 Pages。**无需本地生成索引、无需手动提交索引文件**。
-3. 源地址同样是 `https://shu5230.github.io/dream/`。
+3. 源地址同样是 `https://shu5230.github.io/Dream/`。
 
 > 选 A 还是 B？想完全本地可控选 A；想"丢个 deb 进去 push 就自动上线"选 B。二选一即可，不要同时开（B 会用独立的 Pages 部署，A 的 main/root 设置可忽略）。
 
 ### 步骤 5：验证源是否可用
 
-- **在越狱设备上**：Sileo/Zebra → Sources → + → 输入 `https://shu5230.github.io/dream/`，能正常添加且能看到包即为成功。
-- **快速自查**：浏览器打开 `https://shu5230.github.io/dream/Packages`，应能看到索引文本（`Package:` 开头的段落）。
-- **网页展示**：打开 `https://shu5230.github.io/dream/` 会显示 `index.html` 的展示页，含「在 Sileo 中添加」一键链接（`sileo://source/https://shu5230.github.io/dream/`）。
+- **在越狱设备上**：Sileo/Zebra → Sources → + → 输入 `https://shu5230.github.io/Dream/`，能正常添加且能看到包即为成功。
+- **快速自查**：浏览器打开 `https://shu5230.github.io/Dream/Packages`，应能看到索引文本（`Package:` 开头的段落）。
+- **网页展示**：打开 `https://shu5230.github.io/Dream/` 会显示 `index.html` 的展示页，含「在 Sileo 中添加」一键链接（`sileo://source/https://shu5230.github.io/Dream/`）。
 
 ---
 
