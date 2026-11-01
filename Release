@@ -1,0 +1,16 @@
+Origin: MyJailbreakRepo
+Label: My Jailbreak Repo
+Suite: stable
+Components: main
+Architectures: iphoneos-arm iphoneos-arm64e
+Description: 个人 iOS 越狱插件源（Dopamine / rootless 兼容）
+
+MD5Sum:
+ 9ac97ae30ea0aa2a9b2f3587a711a2e4 591 Packages
+ fabbeed967fe7438ea19653c26361067 474 Packages.gz
+ 3da226b86ee22b8664be55f8da1b03f0 516 Packages.bz2
+
+SHA256:
+ 8c08583e4578027cede563a274a0c17c008ed40436009defa7dfe3f9d7cf4ac1 591 Packages
+ a34886be3bc39021b6490ab183b5836cc0f24de7d8b5fa311623c5580eae93a6 474 Packages.gz
+ 4277b53e6dd01ad387be7a23e81aaea494aa9c0c8ffe14718a7085769e0098a5 516 Packages.bz2

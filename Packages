@@ -1,0 +1,14 @@
+Package: com.yourname.smsbarkforwarder
+Name: SMSBarkForwarder
+Version: 2.8.1
+Architecture: iphoneos-arm64e
+Description: 短信关键字转发到 Bark（SpringBoard 只读采集 + 跨进程投递队列 + 自诊断面板，roothide 隐根路径）
+Maintainer: yourname
+Author: yourname
+Section: Tweaks
+Depends: mobilesubstrate (>= 0.9.5000), firmware (>= 15.0)
+Installed-Size: 400
+Filename: debs/com.yourname.smsbarkforwarder_2.8.1_iphoneos-arm64e.deb
+Size: 150688
+MD5sum: 74abc51313a5640ab019a4b35316cb30
+SHA256: b532fece39742ed02b1c2267820712d2f22f821bf83da4bf9b9f7ee0cae1214e
