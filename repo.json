@@ -1,0 +1,8 @@
+{
+  "origin": "MyJailbreakRepo",
+  "label": "My Jailbreak Repo",
+  "suite": "stable",
+  "components": "main",
+  "architectures": "iphoneos-arm",
+  "description": "个人 iOS 越狱插件源（Dopamine / rootless 兼容）"
+}
