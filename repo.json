@@ -4,5 +4,5 @@
   "suite": "stable",
   "components": "main",
   "architectures": "iphoneos-arm iphoneos-arm64e",
-  "description": "个人 iOS 越狱插件源（Dopamine / rootless 兼容）"
+  "description": "个人 iOS 越狱插件源 Dopamine-roothide 隐根源"
 }
